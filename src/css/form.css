@@ -5,6 +5,7 @@ body {
   background-position: 500px top;
 
 }
+
 .contenedor_formulario {
   position: absolute;
   top: 0;
@@ -18,15 +19,18 @@ body {
   backdrop-filter: blur(30px);
   overflow-y: auto;
 }
+
 .titulo_formulario {
   font-family: var(--fuente-titulo);
   font-size: 2rem;
   text-align: center;
 }
+
 legend {
   font-family: var(--fuente-titulo);
   font-weight: bold;
 }
+
 .contenedor_categoria {
   display: flex;
   flex-wrap: wrap;
@@ -36,6 +40,7 @@ legend {
   padding: 1rem;
   border-radius: 0.5rem;
 }
+
 .contenedor_item {
   display: flex;
   flex-direction: column;
@@ -43,42 +48,34 @@ legend {
 
   padding: 0.5rem 1rem;
   margin: 0 0 0.5rem;
+  width: 50%;
 }
+
 .contenedor_item input, .contenedor_item select {
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
   background-color: #fff;
 }
 
-/* Datos personales */
-.nombre, .direccion {
-  flex: 2;
-}
-.cedula, .fecha_nacimiento, .sexo, .genero {
-  flex: 1;
-}
-
-
 /* datos socioeconomicos */
 .oficio {
   flex: 2;
 }
-.estrato, .nivel_educativo {
-  flex: 1;
-}
-
 
 /* Datos de Inclusión y Comunidad */
 .discapacidad, .grupo_espacial_proteccion, .unidad_comunera_gobierno {
   flex: 1;
 }
+
 .personas_cargo {
   flex: 1;
   min-width: 16rem;
 }
+
 .conocer_unidad_comunero {
   margin: auto;
 }
+
 .conocer_unidad_comunero a {
   text-decoration: none;
   font-family: var(--fuente-titulo);
@@ -94,19 +91,24 @@ legend {
 .enviar_registro {
   justify-content: center;
 }
-.enviar_registro input {
-  max-width: 25rem;
-  min-width: 14rem;
-  margin: auto;
-  background-color: var(--color-primario);
-  color: #fff;
-  font-weight: bolder;
-  transition: all 0.1s ease-in-out;
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
-.enviar_registro input:hover {
-  background-color: #08e275;
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
 }
+
 .enviar_registro h3 {
   margin: 0.5rem 0 0;
   font-family: var(--fuente-titulo);
@@ -115,21 +117,47 @@ legend {
   text-align: center;
 }
 
+.error-message {
+  color: var(--color-error);
+  font-size: 11px;
+  visibility: hidden;
+
+}
+
+.input-error {
+  border: 2px solid red;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25%, 75% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
 @media screen and (max-width: 1440px) {
   body {
     background-size: 150%;
     background-position: 100px top;
   }
-  .contenedor_formulario { 
+
+  .contenedor_formulario {
     width: 50%;
   }
 }
 
 @media screen and (max-width: 750px) {
-  .contenedor_formulario { 
+  .contenedor_formulario {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 965px) {
   body {
     background-size: 195%;

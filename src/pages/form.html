@@ -1,159 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/global.css"><!-- Estilos globales y variables -->
-    <link rel="stylesheet" href="../css/form.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Estilos globales y variables -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/form.css" />
     <title>Formulario de registro</title>
 </head>
 <!-- Pendiente por incluir la barra de navegación de pagina principal -->
 <body>
     <section class="contenedor_formulario">
-        <form>
-            <h1 class="titulo_formulario">Formulario de registro</h1>
-            <fieldset class="datos_personales contenedor_categoria">
-                <legend>Datos Personales</legend>
-                <div class="nombre contenedor_item"> <!-- Nombre completo -->
-                    <label>Nombre completo</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Juan Perez">
-                </div>
-                <div class="cedula contenedor_item"> <!-- Cedula -->
-                    <label>Cédula</label>
-                    <input type="number" id="cedula" name="cedula" placeholder="1047457858">
-                </div>
-                <div class="fecha_nacimiento contenedor_item"> <!-- Fecha de nacimiento -->
-                    <label>Fecha de nacimiento</label>
-                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
-                </div>
-                <div class="sexo contenedor_item"> <!-- Sexo -->
-                    <label>Sexo</label>
-                    <select id="sexo" name="sexo" required>
-                        <option value="" disabled selected hidden>Sexo segun su cedula</option>
-                        <option value="Hombre">Hombre</option>
-                        <option value="Mujer">Mujer</option>
-                    </select>
-                </div>
-                <div class="genero contenedor_item"> <!-- Genero -->
-                    <label>Genero</label>
-                    <select id="genero" name="genero">
-                        <option value="Masculino">Masculino</option>
-                        <option value="Femenino">Femenino</option>
-                        <option value="Otro">Otro</option> <!--agregar java script para mostrar un cuadro que permita digitar
+      <!-- Agregar la url del action para el envio -->
+      <form
+      name="form"
+      action="" 
+      method="post"
+      novalidate
+      id="form"
+      >
+        <h1 class="titulo_formulario">Formulario de registro</h1>
+        <fieldset class="datos_personales contenedor_categoria">
+          <legend>Datos Personales</legend>
+          <div class="nombre contenedor_item">
+            <label>Nombre completo</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Juan Perez"
+            />
+            <span class="error-message"></span>
+          </div>
+          <div class="cedula contenedor_item">
+            <label>Cédula</label>
+            <input
+              type="number"
+              id="cedula"
+              name="cedula"
+              placeholder="1047457858"
+            />
+            <span class="error-message"></span>
+          </div>
+          <div class="fecha_nacimiento contenedor_item">
+            <label>Fecha de nacimiento</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" />
+            <span class="error-message"></span>
+          </div>
+          <div class="sexo contenedor_item">
+            <label>Sexo</label>
+            <select id="sexo" name="sexo" required>
+              <option value="" disabled selected hidden>
+                Sexo según su cédula
+              </option>
+              <option value="Hombre">Hombre</option>
+              <option value="Mujer">Mujer</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+          <div class="genero contenedor_item">
+            <label>Género</label>
+            <select id="genero" name="genero">
+              <option value="" disabled selected hidden>
+                Seleccionar
+              </option>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+              <option value="Otro">Otro</option>
+              <!--agregar java script para mostrar un cuadro que permita digitar
                 escribir el genero con que se identifique. Tambien seria ideal que el backend reconozca esto como parte
                 de la comunidad lgtbiq+ -->
-                    </select>
-                </div>
-                <div class="direccion contenedor_item"> <!-- Direccion -->
-                    <label>Dirección</label>
-                    <input type="text" id="dirección" name="dirección" placeholder="Barrio Bruselas Etapa 3 Casa 24">
-                </div>
-            </fieldset>
+            </select>
+            <span class="error-message"></span>
+          </div>
+          <div class="direccion contenedor_item">
+            <label>Dirección</label>
+            <input
+              type="text"
+              id="direccion"
+              name="direccion"
+              placeholder="Barrio Bruselas Etapa 3 Casa 24"
+            />
+            <span class="error-message"></span>
+          </div>
+        </fieldset>
 
-            <fieldset class="datos_socioeconomicos contenedor_categoria">
-                <legend>Datos socioeconómicos</legend>
-                <div class="nivel_educativo contenedor_item"> <!-- nivel educativo -->
-                    <label>Nivel educativo</label>
-                    <select id="Neducativo" name="Neducativo">
-                        <option value="Primaria">Primaria</option>
-                        <option value="Bachiller">Bachiller</option>
-                        <option value="Técnico">Técnico</option>
-                        <option value="Tecnólogo">Tecnólogo</option>
-                        <option value="Profesional">Profesional</option>
-                        <option value="Posgrado">Posgrado</option>
-                    </select>
-                </div>
-                <div class="oficio contenedor_item"> <!-- oficio -->
-                    <label>Oficio</label>
-                    <input type="text" id="oficio" name="oficio" placeholder="A que se dedica">
-                </div>
-                <div class="estrato contenedor_item">
-                    <label>Estrato</label>
-                    <select id="estrato" name="estrato">
-                        <option value="E1">1</option>
-                        <option value="E2">2</option>
-                        <option value="E3">3</option>
-                        <option value="E4">4</option>
-                        <option value="E5">5</option>
-                        <option value="E6">6</option>
-                    </select>
-                </div>
-            </fieldset>
+        <fieldset class="datos_socioeconomicos contenedor_categoria">
+          <legend>Datos socioeconómicos</legend>
+          <div class="nivel_educativo contenedor_item">
+            <label>Nivel educativo</label>
+            <select id="Neducativo" name="Neducativo">
+              <option value="" disabled selected hidden>
+                Seleccionar
+              </option>
+              <option value="Primaria">Primaria</option>
+              <option value="Bachiller">Bachiller</option>
+              <option value="Técnico">Técnico</option>
+              <option value="Tecnólogo">Tecnólogo</option>
+              <option value="Profesional">Profesional</option>
+              <option value="Posgrado">Posgrado</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+          <div class="oficio contenedor_item">
+            <label>Oficio</label>
+            <input
+              type="text"
+              id="oficio"
+              name="oficio"
+              placeholder="A que se dedica"
+            />
+            <span class="error-message"></span>
+          </div>
+          <div class="estrato contenedor_item">
+            <label>Estrato</label>
+            <select id="estrato" name="estrato">
+              <option value="" disabled selected hidden>
+                Seleccionar
+              </option>
+              <option value="E1">1</option>
+              <option value="E2">2</option>
+              <option value="E3">3</option>
+              <option value="E4">4</option>
+              <option value="E5">5</option>
+              <option value="E6">6</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+        </fieldset>
 
-            <fieldset class="datos_inclusion_comunidad contenedor_categoria">
-                <legend>Datos de Inclusión y Comunidad</legend>
-                <div class="discapacidad contenedor_item">
-                    <label>Discapacidad</label>
-                    <select id="discapacidad" name="discapacidad">
-                        <option value="Ninguna" selected>Ninguna</option>
-                        <option value="Visual">Visual</option>
-                        <option value="Auditiva">Auditiva</option>
-                        <option value="Cognitiva">Cognitiva</option>
-                        <option value="Talla_baja">Talla baja</option>
-                        <option value="Fisica">Fisica</option>
-                        <option value="Mental">Mental</option>
-                    </select>
-                </div>
-                <div class="grupo_espacial_proteccion contenedor_item">
-                    <label>Grupo especial de protección</label>
-                    <select id="gep" name="gep">
-                        <option value="Ninguna" selected>Ninguna</option>
-                        <option value="Afrodescendiente">Afrodescendiente</option>
-                        <option value="Analfabetar">Analfabeta</option>
-                        <option value="Desplazado">Desplazado</option>
-                        <option value="Migrante">Migrante</option>
-                        <option value="Cabeza_hogar">Cabeza de hogar</option>
-                        <option value="Embarazo">Embarazo</option>
-                        <option value="Victima_violencia">Victima de violencia</option>
-                        <option value="Pobreza_extrema">Pobreza extrema</option>
-                        <option value="NNA">Niño, niña, adolescente</option>
-                        <option value="Indigena">Indigena</option>
-                    </select>
-                </div>
-                <div class="personas_cargo contenedor_item">
-                    <label>Personas a cargo</label>
-                    <input type="number" id="Personascargo" name="Personascargo" placeholder="Personas que dependen economicamente 
-            de usted" min="1" max="10">
-                </div>
-                <div class="unidad_comunera_gobierno contenedor_item">
-                    <label>Unidad Comunera de Gobierno</label>
-                    <select id="UCG" name="UCG">
-                        <option value="UCG1">1</option>
-                        <option value="UCG2">2</option>
-                        <option value="UCG3">3</option>
-                        <option value="UCG4">4</option>
-                        <option value="UCG5">5</option>
-                        <option value="UCG6">6</option>
-                        <option value="UCG7">7</option>
-                        <option value="UCG8">8</option>
-                        <option value="UCG9">9</option>
-                        <option value="UCG10">10</option>
-                        <option value="UCG11">11</option>
-                        <option value="UCG12">12</option>
-                        <option value="UCG13">13</option>
-                        <option value="UCG14">14</option>
-                        <option value="UCG15">15</option>
-                    </select>
-                </div>
-                <div class="conocer_unidad_comunero contenedor_item">
-                    <a href="https://cgenacomovamos.maps.arcgis.com/apps/dashboards/6daeacc2276f41d0bfa9cadc6889950b"
-                        target="blank">
-                        Puede conocer su Unidad Comunera de Gobierno aqui</a>
-                    <!--Backend debe marcar como localidad 1 las UCG1,2,3,8 9 y 10, como localidad 2 las UCG 4, 5, 6 y 7
+        <fieldset class="datos_inclusion_comunidad contenedor_categoria">
+          <legend>Datos de Inclusión y Comunidad</legend>
+          <div class="discapacidad contenedor_item">
+            <label>Discapacidad</label>
+            <select id="discapacidad" name="discapacidad">
+              <option value="Ninguna" selected>Ninguna</option>
+              <option value="Visual">Visual</option>
+              <option value="Auditiva">Auditiva</option>
+              <option value="Cognitiva">Cognitiva</option>
+              <option value="Talla_baja">Talla baja</option>
+              <option value="Fisica">Fisica</option>
+              <option value="Mental">Mental</option>
+              <option value="" disabled selected hidden>
+                Seleccionar
+              </option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+          <div class="grupo_espacial_proteccion contenedor_item">
+            <label>Grupo especial de protección</label>
+            <select id="gep" name="gep">
+              <option value="Ninguna" selected>Ninguna</option>
+              <option value="Afrodescendiente">Afrodescendiente</option>
+              <option value="Analfabetar">Analfabeta</option>
+              <option value="Desplazado">Desplazado</option>
+              <option value="Migrante">Migrante</option>
+              <option value="Cabeza_hogar">Cabeza de hogar</option>
+              <option value="Embarazo">Embarazo</option>
+              <option value="Victima_violencia">Victima de violencia</option>
+              <option value="Pobreza_extrema">Pobreza extrema</option>
+              <option value="NNA">Niño, niña, adolescente</option>
+              <option value="Indigena">Indigena</option>
+              <option value="" disabled selected hidden>
+                Seleccionar
+              </option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+          <div class="personas_cargo contenedor_item">
+            <label>Personas a cargo</label>
+            <input
+              type="number"
+              id="Personascargo"
+              name="Personascargo"
+              placeholder="Personas que dependen economicamente 
+            de usted"
+              min="1"
+              max="10"
+            />
+            <span class="error-message"></span>
+          </div>
+          <div class="unidad_comunera_gobierno contenedor_item">
+            <label>Unidad Comunera de Gobierno</label>
+            <select id="UCG" name="UCG">
+              <option value="" disabled selected hidden>
+                Seleccionar
+              </option>
+              <option value="UCG1">1</option>
+              <option value="UCG2">2</option>
+              <option value="UCG3">3</option>
+              <option value="UCG4">4</option>
+              <option value="UCG5">5</option>
+              <option value="UCG6">6</option>
+              <option value="UCG7">7</option>
+              <option value="UCG8">8</option>
+              <option value="UCG9">9</option>
+              <option value="UCG10">10</option>
+              <option value="UCG11">11</option>
+              <option value="UCG12">12</option>
+              <option value="UCG13">13</option>
+              <option value="UCG14">14</option>
+              <option value="UCG15">15</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+          <div class="conocer_unidad_comunero contenedor_item">
+            <a
+              href="https://cgenacomovamos.maps.arcgis.com/apps/dashboards/6daeacc2276f41d0bfa9cadc6889950b"
+              target="blank"
+            >
+              Puede conocer su Unidad Comunera de Gobierno aqui</a
+            >
+            <!--Backend debe marcar como localidad 1 las UCG1,2,3,8 9 y 10, como localidad 2 las UCG 4, 5, 6 y 7
                 y como localidad 3 las UCG 11, 12, 13, 14 y 15-->
-                </div>
-            </fieldset>
+          </div>
+        </fieldset>
 
-            <fieldset class="contenedor_categoria enviar_registro">
-                <div class="contenedor_item">
-                    <input type="submit" id="botonRegistro" value="Registrarse">
-                    <h3>La inscripción no asegura la escogencia en los proyectos ofrecidos</h3>
-                </div>
-            </fieldset>
-
-        </form>
+        <fieldset class="contenedor_categoria enviar_registro">
+          <div class="contenedor_item">
+            <button type="submit" id="botonRegistro" value="Registrarse">Registrarse</button>
+            <h3>
+              La inscripción no asegura la escogencia en los proyectos ofrecidos
+            </h3>
+          </div>
+        </fieldset>
+      </form>
     </section>
-</body>
-
+    <script src="../js/index.js"></script>
+  </body>
 </html>

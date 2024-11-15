@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Proyectos - Alcaldía</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo de la Alcaldía">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="#proyectos">Lista de Proyectos</a></li>
+                <li><a href="#pqr">PQR</a></li>
+                <li><a href="#accede">Accede</a></li>
+            </ul>
+        </nav>
+        <div class="slider">
+            <!-- Aquí puedes agregar las imágenes del slider -->
+            <img src="imagen1.jpg" alt="Imagen 1">
+            <img src="imagen2.jpg" alt="Imagen 2">
+            <img src="imagen3.jpg" alt="Imagen 3">
+        </div>
+    </header>
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido</h2>
+            <p>Bienvenido a la plataforma de selección de proyectos de la alcaldía. Aquí puedes registrar tu proyecto y participar en el proceso de selección.</p>
+            <button onclick="location.href='#registro'">Inscribirse</button>
+        </section>
+        <section id="objetivos">
+            <h2>Objetivos</h2>
+            <p>Descripción de la página web con los objetivos del proyecto.</p>
+        </section>
+        <section id="paso-a-paso">
+            <h2>Paso a Paso</h2>
+            <p>Instrucciones detalladas sobre cómo registrar y participar en el proceso de selección de proyectos.</p>
+        </section>
+    </main>
+    <footer>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Redes sociales y enlaces de contacto.</p>
+            <ul>
+                <li><a href="https://facebook.com">Facebook</a></li>
+                <li><a href="https://twitter.com">Twitter</a></li>
+                <li><a href="https://instagram.com">Instagram</a></li>
+            </ul>
+        </section>
+        <p>&copy; 2024 Alcaldía de Cartagena de Indias</p>
+    </footer>
+</body>
+</html>

@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Logo de la Alcaldía">
+            <img src="logo.png" alt="Logo del proyecto / Entidad">
         </div>
         <nav>
             <ul>
@@ -30,7 +30,7 @@
     <main>
         <section id="inicio">
             <h2>Bienvenido</h2>
-            <p>Bienvenido a la plataforma de selección de proyectos de la alcaldía. Aquí puedes registrar tu proyecto y participar en el proceso de selección.</p>
+            <p>Bienvenido a la plataforma de selección de proyectos. Aquí puedes registrar tu proyecto y participar en el proceso de selección.</p>
             <button onclick="location.href='#registro'">Inscribirse</button>
         </section>
         <section id="objetivos">

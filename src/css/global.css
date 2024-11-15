@@ -1,0 +1,42 @@
+/* Importando fuente Montserrat normal - italic */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900; /* Rango de pesos de la fuente */
+  font-style: normal;   /* O también puedes definir italic si el archivo lo incluye */
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../assets/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900; 
+  font-style: italic; 
+}
+
+/* Importando fuente Raleway normal - italic */
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../assets/fonts/Raleway-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900; 
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../assets/fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900; 
+  font-style: italic; 
+}
+
+:root {
+  --fuente-titulo: 'Raleway', sans-serif;
+  --fuente-cuerpo: 'Montserrat', sans-serif;
+  --color-primario: #1cc771;
+  --color-secundario: #2594df;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fuente-cuerpo);
+}
+

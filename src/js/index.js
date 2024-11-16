@@ -1,3 +1,5 @@
+import { Form } from "./api_form.js";
+
 const registerForm = document.getElementById("form");
 
 function showError(invalidFields) {
@@ -34,7 +36,7 @@ function clearErrorMessages() {
   });
 }
 
-function senData(event) {
+async function senData(event) {
   const formData = new FormData(event.target);
   const data = {};
 
@@ -43,8 +45,56 @@ function senData(event) {
   });
 
   console.log("Datos en JSON:", JSON.stringify(data, null, 2));
-  registerForm.submit();
+
+  // Crear instancia de la clase Form
+  const api = new Form('http://localhost:8000');
+
+  try {
+    // Realizar la peticion con Axios usando la clase Form
+    const response = await api.sendGetRequest('/form_registration/', data);
+
+    console.log("Respuesta del servidor:", response);
+
+    if (response.status === "success") {
+      Swal.fire({
+        icon: 'success',
+        title: 'Realizado',
+        text: response.message || 'Ocurrió un error al enviar los datos. Por favor, inténtelo de nuevo.',
+        confirmButtonText: 'Aceptar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // reload the current page
+          window.location.reload();
+        }
+      });
+
+    } else if (response.status === "error") {
+      // Usando SweetAlert para mostrar un error
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: response.message || 'Ocurrió un error al enviar los datos. Por favor, inténtelo de nuevo.',
+        confirmButtonText: 'Aceptar'
+      });
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: response.message || 'Ocurrió un error al enviar los datos. Por favor, inténtelo de nuevo.',
+        confirmButtonText: 'Aceptar'
+      });
+    }
+
+  } catch (error) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: error.message || 'Ocurrió un error al enviar los datos. Por favor, inténtelo de nuevo.',
+      confirmButtonText: 'Aceptar'
+    });
+  }
 }
+
 
 registerForm.addEventListener("submit", function (event) {
   event.preventDefault();

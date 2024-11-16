@@ -1,0 +1,19 @@
+{
+  "1101445764": {
+    "nombre": "Carlos Herazo",
+    "cedula": "1101445764",
+    "fecha_nacimiento": "2024-11-16",
+    "sexo": "Hombre",
+    "genero": "Masculino",
+    "direccion": "Carrera 101 39 I 32 San Jos\u00e9 de los Campanos Cartagena de Indias, Provincia de Cartagena, Bol\u00edvar",
+    "contactnumber": "3148792310",
+    "correoelectronico": "correo@correo.com",
+    "Neducativo": "Primaria",
+    "oficio": "Empleado",
+    "estrato": "E1",
+    "discapacidad": "Ninguna",
+    "gep": "Ninguna",
+    "Personascargo": "1",
+    "UCG": "UCG1"
+  }
+}

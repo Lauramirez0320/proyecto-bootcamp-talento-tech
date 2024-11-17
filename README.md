@@ -20,5 +20,9 @@ El siguiente proyecto se realiza bajo las directrices del Bootcamp Talento Tech 
 
 ### Authors
 
-- [@lauramirez0320](https://github.com/Lauramirez0320)
-
+_ [Camilo Nájera](https://github.com/kirakiba)
+_ [Luis Fernando Puerta](https://github.com/OctoberDesigner)
+- [Carlos Herazo](https://github.com/CarlosHerazo)
+- [Deivis Salcedo](https://github.com/Stinc0-sys)
+- [Lau Ramirez](https://github.com/Lauramirez0320)
+- [Pedro Tinoco](https://github.com/ptinocogarcia)

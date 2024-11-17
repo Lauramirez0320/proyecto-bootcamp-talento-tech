@@ -1,0 +1,164 @@
+body {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='82' height='82' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23D7D2FA' fill-opacity='0.54' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+}
+
+.proyectos {
+  padding: 1rem 2rem;
+  margin: 1rem;
+}
+
+.titulo_pagina {
+  margin: 0 0 1rem;
+  font-family: var(--fuente-titulo);
+  font-weight: 200;
+  font-size: 2.5rem;
+  padding: 1rem 2rem;
+  background-color: #ffffff1f;
+  backdrop-filter: blur(20px);
+}
+
+.contenedor_proyectos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.proyecto_item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 32%;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff11;
+  backdrop-filter: blur(20px);
+  cursor: pointer;
+}
+
+.proyecto_item h3 {
+  font-family: var(--fuente-titulo);
+  font-weight: 500;
+}
+
+.contratante {
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff9a;
+  box-shadow: 3px 3px 5px #6e6d6d2c;
+}
+.contratante p {
+  font-size: 0.9rem;
+}
+
+.info_principal {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.detalles {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 1rem;
+  width: 50%;
+  text-align: center;
+}
+.contratista {
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: #0cb876;
+  box-shadow: 3px 3px 5px #6e6d6d48;
+}
+.contratista h3 {
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+.contratista p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.valor_inversion {
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-secundario);
+  color: #ffffff;
+  text-align: center;
+  height: fit-content;
+  box-shadow: 3px 3px 5px #6e6d6d48;
+}
+
+.valor_inversion h3 {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.enlace_secop {
+  position: relative;
+}
+.enlace_secop h3 {
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 0.4rem;
+  background-color: #ffffff;
+}
+.enlace_secop img {
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 5px #6e6d6d27;
+}
+
+/* Modal */
+
+
+#modal.hidden {
+  display: none;
+}
+
+#modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000080; 
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_content {
+  position: absolute;
+  top: 25%;
+  right: 20%;
+  width: 60%;
+  padding: 20px;
+  border-radius: 8px;
+  background: white;
+}
+
+.close {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  background-color: #d83939;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.close:hover {
+  background-color: #ff1d1d;
+}

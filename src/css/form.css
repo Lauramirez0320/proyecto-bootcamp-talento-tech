@@ -82,6 +82,7 @@ legend {
   font-size: 0.8rem;
   font-weight: bolder;
   color: #fff;
+  width: 100%;
   padding: 0.2rem 1rem;
   border-radius: 0.2rem;
   background-color: var(--color-secundario);

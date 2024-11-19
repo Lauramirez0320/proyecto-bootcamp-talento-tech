@@ -1,5 +1,5 @@
 
-# Beneficiarios en Acción
+# EmprendeNet
 
 Plataforma que permite la recolección de datos y selección transparente de posibles beneficiarios para Programas Sociales y de Apoyo a Emprendimientos en Cartagena de Indias, Colombia.
 

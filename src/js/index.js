@@ -56,6 +56,7 @@ async function senData(event) {
     console.log("Respuesta del servidor:", response);
 
     if (response.status === "success") {
+<<<<<<< HEAD
         Swal.fire({
           icon: 'success',
           title: 'Realizado',
@@ -67,6 +68,20 @@ async function senData(event) {
                   // window.location.reload();
               }
           });
+=======
+      Swal.fire({
+        icon: 'success',
+        title: 'Realizado',
+        text: response.message || 'Ocurrió un error al enviar los datos. Por favor, inténtelo de nuevo.',
+        confirmButtonText: 'Aceptar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // reload the current page 
+          window.location.reload();
+        }
+      });
+
+>>>>>>> 49452889d656d72ff996eca985dac0cc01fc1ccf
     } else if (response.status === "error") {
       // Usando SweetAlert para mostrar un error
       Swal.fire({

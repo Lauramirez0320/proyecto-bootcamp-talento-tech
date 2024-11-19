@@ -79,6 +79,108 @@
     width: 40%;
   }
 
+  .objs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 5rem;
+  }
+  
+  .texto_objs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .texto_objs h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--color-primario);
+  }
+  .texto_objs p {
+    font-size: 1.3rem;
+  }
+
+  .paso_paso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 5rem;
+  }
+  
+  .texto_pasos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .texto_pasos h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--color-primario);
+  }
+  .texto_pasos p {
+    font-size: 1.3rem;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .contacto {
+    margin-bottom: 20px;
+}
+
+footer .contacto h2 {
+    margin-bottom: 10px;
+}
+
+footer .contacto p {
+    margin-bottom: 10px;
+}
+
+footer .redes {
+    list-style: none;
+    padding: 0;
+}
+
+footer .redes li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .redes li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .redes li a img { 
+  width: 30px; height: 30px;
+  background: none
+}
+
+footer .redes li a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+}
+
+
 
   /* MODAL para login */
 

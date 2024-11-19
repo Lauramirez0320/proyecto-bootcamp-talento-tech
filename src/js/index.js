@@ -63,7 +63,7 @@ async function senData(event) {
         confirmButtonText: 'Aceptar'
       }).then((result) => {
         if (result.isConfirmed) {
-          // reload the current page
+          // reload the current page 
           window.location.reload();
         }
       });

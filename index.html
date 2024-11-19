@@ -18,7 +18,7 @@
                 <li><a href="#quienes-somos">Quiénes Somos</a></li>
                 <li><a href="#proyectos">Lista de Proyectos</a></li>
                 <li><a href="#pqr">PQR</a></li>
-                <li><a href="#accede">Accede</a></li>
+                <li id="acceder"><a href="#accede">Accede</a></li>
             </ul>
         </nav>
         <!--<div class="slider">
@@ -37,42 +37,58 @@
             </div>
             <img src="../assets/binvenidos_img.svg" alt="ilustraciopn bienvenida" srcset="">
         </section>
-        <section class="objetivos" id="objetivos">
+        <section class="objs" id="objs">
+           <div class="texto_objs">
             <h2>Objetivos</h2>
             <p>El aplicativo permitirá a los ciudadanos acceder en condiciones de igualdad a los recursos públicos dispuestos en en plan de desarrrolo para 
                 los programas sociales adelantados por la Alcaldia de Cartagena y sus dependencias, podras registrarte para ser priorizado en los proyectos
             que se esten ejecutando.</p><br><br>
             <p>La transparencia es una prioridad de este gobierno, por lo que el ciudadano podra conocer los procesos que estan siendo ejecutados en el apartado Lista de Proyectos.</p><br><br>
             <p>la entidad pública diseño el presente formulario encaminado a brindar la oportunidad a todos los ciudadanos de acceder a estos proyectos
-                en condiciones de igualdad</p>
-            
-
-         </p>
+                en condiciones de igualdad</p><br><br>
+           </div>
+         
         </section>
         <section class="paso_paso" id="paso-a-paso">
+            <div class="texto_pasos">
             <h2>Paso a Paso</h2>
             <p>1. Los ciudadanos deben inscribirse llenando el formulario dispuesto en la pagina web. Este formulario tiene como finalidad conocer las potenciales beneficarios
-                de los proyectos sociales contratados por la alcaldia de Cartagena. 
-                2. Es necesario que la información sea veridica, de descubrirse falsedades podra ser apartado del proyecto en el que haya sido escogido.
-                3. Los procesos son celebrados en la plataforma de compras públicas Secop, en ella el proceso de selección de contratista puede tardar de 1 a 3 meses
-                4. Una vez escogido el contratista, la entidad pública utilizara el formularios que arrojaran una priorización considerando las condiciones socioeconomicas de los ciudadanos
-                y las metas del proyecto.
-                5. Una vez surtida la selección de beneficiarios, el personal del contratista procedera a comunicarse con los beneficiarios para indicarles los pasos a seguir para recibir 
-                los beneficios de los proyectos y la duración de los mismos. 
+                de los proyectos sociales contratados por la alcaldia de Cartagena.</p><br> 
+            <p>2. Es necesario que la información sea veridica, de descubrirse falsedades podra ser apartado del proyecto en el que haya sido escogido.</p><br>
+            <p>3. Los procesos son celebrados en la plataforma de compras públicas Secop, en ella el proceso de selección de contratista puede tardar de 1 a 3 meses</p><br>
+            <p>4. Una vez escogido el contratista, la entidad pública utilizara el formularios que arrojaran una priorización considerando las condiciones socioeconomicas de los ciudadanos
+                y las metas del proyecto.</p><br>
+            <p>5. Una vez surtida la selección de beneficiarios, el personal del contratista procedera a comunicarse con los beneficiarios para indicarles los pasos a seguir para recibir 
+                los beneficios de los proyectos y la duración de los mismos.</p><br><br> 
             </p>
+            </div>
         </section>
     </main>
-    <footer>
-        <section class="cintacto" id="contacto">
-            <h2>Contacto</h2>
-            <p>Redes sociales y enlaces de contacto.</p>
-            <ul class="redes">
-                <li><a href="https://facebook.com">Facebook</a></li>
-                <li><a href="https://x.com">X</a></li>
-                <li><a href="https://instagram.com">Instagram</a></li>
-            </ul>
-        </section>
-        <p>&copy; 2024 Alcaldía de Cartagena de Indias</p>
-    </footer>
+    <div id="modal" class="modal_login hide">
+        <div id="modalContenido" class="modal_login_contenido">
+            <h2 class="modal_titulo">Iniciar sesión</h2>
+            <form action="" method="POST">
+                <div class="cedula" id="numero_cedula">
+                    <label for="cedula">Numero de cédula</label>
+                    <input type="text" id="cedula" placeholder="Ingrese su numero de cedula" minlength="8" maxlength="10" required>
+                </div>
+                <div class="contrasena" id="numero_contrasena">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" placeholder="Ingrese su contraseña">
+                </div>
+                <input class="iniciar_sesion_boton" type="submit" value="Iniciar sesión">
+            </form>
+        </div>
+    </div>
+    <footer> <section class="contacto" id="contacto"> 
+        <h2>Contacto</h2> 
+        <p>Síguenos en nuestras redes sociales.</p> 
+        <ul class="redes"> 
+            <li><a href="https://facebook.com"><img src="../assets/facebook.png" alt="Facebook"></a></li> 
+            <li><a href="https://x.com"><img src="../assets/x.png" alt="X"></a></li> 
+            <li><a href="https://instagram.com"><img src="../assets/instagram.jpg" alt="Instagram"></a></li> 
+        </ul> </section> <p>&copy; 2024 Alcaldía de Cartagena de Indias</p> 
+    </footer> 
+    <script type="module" src="./src/js/login_modal.js"></script>
 </body>
 </html>

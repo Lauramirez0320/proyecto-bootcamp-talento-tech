@@ -16,5 +16,21 @@ export class Form {
       throw error;
     }
   }
+
+  async sedGetUser(endpoint) {
+    try {
+      const response = await axios({
+        method: 'get',
+        url:`${this.baseURL}${endpoint}`
+      });
+      return response.data;
+    } catch (error) {
+      console.error('Error en la petición GET:', error.message);
+      throw error;
+    }
+  }
+
+
+
 }
 

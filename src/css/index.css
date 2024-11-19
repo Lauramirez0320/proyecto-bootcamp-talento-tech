@@ -78,4 +78,100 @@
   .inicio img {
     width: 40%;
   }
-  
+
+
+  /* MODAL para login */
+
+  .modal_login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000002f;
+  }
+
+  .modal_login_contenido {
+    position: absolute;
+    top: 12%;
+    right: 4.5%;
+    width: 20rem;
+    height: 25rem;
+    opacity: 0;
+    border-radius: 1rem;
+    background-color: #ffffffb2;
+    backdrop-filter: blur(15px);
+    animation: mostrar 0.2s ease-in-out forwards;
+  }
+
+  .hide {
+    display: none;
+  }
+  .modal_titulo {
+    padding: 1rem;
+    margin: 0 0 1rem;
+    border-radius: 1rem 1rem 0 0;
+    text-align: center;
+    color: #fff;
+    font-family: var(--fuente-titulo);
+    font-weight: 300;
+    background-color: var(--color-primario);
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cedula, .contrasena {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+  }
+  .cedula label, .contrasena label {
+    text-align: center;
+    font-family: var(--fuente-titulo);
+  }
+  .cedula input, .contrasena input {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 1.5rem;
+  }
+
+  .iniciar_sesion_boton {
+    width: 10rem;
+    margin: 1rem auto 0;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 1.5rem;
+    color: #fff;
+    font-size: 1rem;
+    background-color: var(--color-primario);
+  }
+
+  .animacion_ocultar {
+    animation: ocultar 0.2s ease-in-out forwards;
+  }
+
+  @keyframes mostrar {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes ocultar {
+    0% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }

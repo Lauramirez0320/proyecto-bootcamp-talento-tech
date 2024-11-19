@@ -18,7 +18,7 @@
                 <li><a href="#quienes-somos">Quiénes Somos</a></li>
                 <li><a href="#proyectos">Lista de Proyectos</a></li>
                 <li><a href="#pqr">PQR</a></li>
-                <li><a href="#accede">Accede</a></li>
+                <li id="acceder"><a href="#accede">Accede</a></li>
             </ul>
         </nav>
         <!--<div class="slider">
@@ -62,8 +62,24 @@
             </p>
         </section>
     </main>
+    <div id="modal" class="modal_login hide">
+        <div id="modalContenido" class="modal_login_contenido">
+            <h2 class="modal_titulo">Iniciar secion</h2>
+            <form action="" method="POST">
+                <div class="cedula" id="numero_cedula">
+                    <label for="cedula">Numero de cedula</label>
+                    <input type="text" id="cedula" placeholder="Ingrese su numero de cedula" minlength="8" maxlength="10" required>
+                </div>
+                <div class="contrasena" id="numero_contrasena">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" placeholder="Ingrese su contraseña">
+                </div>
+                <input class="iniciar_sesion_boton" type="submit" value="Iniciar secion">
+            </form>
+        </div>
+    </div>
     <footer>
-        <section class="cintacto" id="contacto">
+        <section class="contacto" id="contacto">
             <h2>Contacto</h2>
             <p>Redes sociales y enlaces de contacto.</p>
             <ul class="redes">
@@ -74,5 +90,6 @@
         </section>
         <p>&copy; 2024 Alcaldía de Cartagena de Indias</p>
     </footer>
+    <script type="module" src="./src/js/login_modal.js"></script>
 </body>
 </html>

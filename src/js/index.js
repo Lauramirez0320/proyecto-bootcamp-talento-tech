@@ -52,36 +52,15 @@ async function senData(event) {
   try {
     // Realizar la peticion con Axios usando la clase Form
     const response = await api.sendGetRequest('/form_registration/', data);
-
-    console.log("Respuesta del servidor:", response);
-
     if (response.status === "success") {
-<<<<<<< HEAD
-        Swal.fire({
-          icon: 'success',
-          title: 'Realizado',
-          text: response.message || 'Ocurrió un error al enviar los datos. Por favor, inténtelo de nuevo.',
-          confirmButtonText: 'Aceptar'
-          }).then((result) => {
-              if (result.isConfirmed) {
-                  // Recargar pagina después de que el usuario confirme
-                  // window.location.reload();
-              }
-          });
-=======
+
       Swal.fire({
         icon: 'success',
         title: 'Realizado',
         text: response.message || 'Ocurrió un error al enviar los datos. Por favor, inténtelo de nuevo.',
         confirmButtonText: 'Aceptar'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          // reload the current page 
-          window.location.reload();
-        }
       });
-
->>>>>>> 49452889d656d72ff996eca985dac0cc01fc1ccf
+      console.log(response)
     } else if (response.status === "error") {
       // Usando SweetAlert para mostrar un error
       Swal.fire({

@@ -39,7 +39,7 @@ function clearErrorMessages() {
 async function senData(event) {
   const formData = new FormData(event.target);
   const data = {};
-
+  
   formData.forEach((value, key) => {
     data[key] = value;
   });
@@ -56,18 +56,17 @@ async function senData(event) {
     console.log("Respuesta del servidor:", response);
 
     if (response.status === "success") {
-      Swal.fire({
-        icon: 'success',
-        title: 'Realizado',
-        text: response.message || 'Ocurrió un error al enviar los datos. Por favor, inténtelo de nuevo.',
-        confirmButtonText: 'Aceptar'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          // reload the current page
-          window.location.reload();
-        }
-      });
-
+        Swal.fire({
+          icon: 'success',
+          title: 'Realizado',
+          text: response.message || 'Ocurrió un error al enviar los datos. Por favor, inténtelo de nuevo.',
+          confirmButtonText: 'Aceptar'
+          }).then((result) => {
+              if (result.isConfirmed) {
+                  // Recargar pagina después de que el usuario confirme
+                  // window.location.reload();
+              }
+          });
     } else if (response.status === "error") {
       // Usando SweetAlert para mostrar un error
       Swal.fire({
@@ -97,7 +96,7 @@ async function senData(event) {
 
 
 registerForm.addEventListener("submit", function (event) {
-  event.preventDefault();
+  event.preventDefault(); // Esto ya previene la recarga por defecto
 
   const formElements = [...event.target.elements];
   const inputFields = formElements.filter(
@@ -111,7 +110,7 @@ registerForm.addEventListener("submit", function (event) {
   if (invalidFields.length > 0) {
     showError(invalidFields);
   } else {
-    senData(event);
+    senData(event); 
   }
   clearErrorMessages();
 });

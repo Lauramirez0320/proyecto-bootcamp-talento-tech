@@ -6,7 +6,7 @@ const cedula = document.getElementById('cedula');
 
 
 /* Funcion para desplegar modal */
-function abrirModal(e) {
+export function abrirModal(e) {
   e.preventDefault();
   modal.classList.remove('hide');
   modal.classList.remove('animacion_ocultar');
@@ -23,7 +23,7 @@ function cerrarModal(e) {
 }
 
 /* Funcion para admitir solo numeros */
-function evitarLetras(event) {
+export function evitarLetras(event) {
   const key = event.key;
 
   // Verifica si la tecla presionada no es un número

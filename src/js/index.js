@@ -1,7 +1,8 @@
 import { Form } from "./api_form.js";
 
 const registerForm = document.getElementById("form");
-
+const id = document.getElementById('cedula');
+const number = document.getElementById('telefono');
 function showError(invalidFields) {
   invalidFields.forEach((field, index) => {
     const errorMessage =
@@ -68,16 +69,17 @@ async function senData(event) {
 
   try {
     // Realizar la peticion con Axios usando la clase Form
-    const response = await api.sendGetRequest('/form_registration/', data);
+    const response = await api.sendGetRequest('/form_registration', data);
     if (response.status === "success") {
 
-      Swal.fire({
+    await Swal.fire({
         icon: 'success',
         title: 'Realizado',
-        text: response.message || 'Ocurrió un error al enviar los datos. Por favor, inténtelo de nuevo.',
+        text: response.message || 'Datos enviados correctamente',
         confirmButtonText: 'Aceptar'
       });
       console.log(response)
+      window.location.href = "../../index.html";
     } else if (response.status === "error") {
       // Usando SweetAlert para mostrar un error
       Swal.fire({
@@ -105,6 +107,8 @@ async function senData(event) {
   }
 }
 
+id.addEventListener("keypress", (e) => evitarLetras(e))
+number.addEventListener("keypress", (e) => evitarLetras(e))
 
 registerForm.addEventListener("submit", function (event) {
   event.preventDefault(); // Esto ya previene la recarga por defecto

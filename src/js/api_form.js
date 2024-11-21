@@ -6,13 +6,16 @@ export class Form {
   async sendGetRequest(endpoint, data = {}) {
     try {
       const response = await axios({
-        method: 'get',
+        method: 'post',
         url: `${this.baseURL}${endpoint}`,
-        params: data, 
+        data: data, 
+        headers: {
+          'Content-Type': 'application/json'
+        }
       });
       return response.data; // Retorna la respuesta en formato JSON
     } catch (error) {
-      console.error('Error en la petición GET:', error.message);
+      console.error('Error en la petición POST:', error.message);
       throw error;
     }
   }

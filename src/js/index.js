@@ -13,6 +13,23 @@ function showError(invalidFields) {
     field.classList.add("input-error");
   });
 }
+// Codigo para mostrar y ocultar la contraseña seleccionando un checkbox
+document.getElementById('showpassword').addEventListener("change", function() {
+  const confirmPasswordField = document.getElementById("password");
+  if (this.checked) {
+    confirmPasswordField.type = "text";
+  } else {
+    confirmPasswordField.type = "password";
+  }
+});
+document.getElementById('showpasswordconfirm').addEventListener("change", function() {
+  const confirmPasswordField = document.getElementById("passwordconfirm");
+  if (this.checked) {
+    confirmPasswordField.type = "text";
+  } else {
+    confirmPasswordField.type = "password";
+  }
+});
 
 function clearErrorMessages() {
   const inputFields = document.querySelectorAll("input, select");

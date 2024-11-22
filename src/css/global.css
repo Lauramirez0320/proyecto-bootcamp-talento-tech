@@ -83,18 +83,18 @@
     flex-direction: column;
     justify-content: center;
   }
-  .cedula, .contrasena {
+  .cedula_modal, .contrasena_modal {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.5rem;
     padding: 1rem 2rem;
   }
-  .cedula label, .contrasena label {
+  .cedula_modal label, .contrasena_modal label {
     text-align: center;
     font-family: var(--fuente-titulo);
   }
-  .cedula input, .contrasena input {
+  .cedula_modal input, .contrasena_modal input {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 1.5rem;

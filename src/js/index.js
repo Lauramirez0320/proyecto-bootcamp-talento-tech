@@ -2,7 +2,7 @@ import { Form } from "./api_form.js";
 
 const registerForm = document.getElementById("form");
 const id = document.getElementById('cedula');
-const number = document.getElementById('telefono');
+const number = document.getElementById('contactnumber');
 function showError(invalidFields) {
   invalidFields.forEach((field, index) => {
     const errorMessage =

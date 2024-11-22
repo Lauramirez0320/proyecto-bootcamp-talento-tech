@@ -72,13 +72,8 @@ async function senData(event) {
     const response = await api.sendGetRequest('/form_registration', data);
     if (response.status === "success") {
 
-    await Swal.fire({
-        icon: 'success',
-        title: 'Realizado',
-        text: response.message || 'Datos enviados correctamente',
-        confirmButtonText: 'Aceptar'
-      });
       console.log(response)
+      alert("Datos enviados correctamente")
       window.location.href = "../../index.html";
     } else if (response.status === "error") {
       // Usando SweetAlert para mostrar un error

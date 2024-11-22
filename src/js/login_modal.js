@@ -3,12 +3,12 @@ const modalContenido = document.getElementById('modalContenido');
 const botonAcceder = document.getElementById('acceder');
 
 const cedula = document.getElementById('cedula');
-
+modal.style.display = 'none';
 
 /* Funcion para desplegar modal */
 export function abrirModal(e) {
   e.preventDefault();
-  modal.classList.remove('hide');
+  modal.style.display = 'block';
   modal.classList.remove('animacion_ocultar');
 }
 
@@ -16,7 +16,7 @@ export function abrirModal(e) {
 function cerrarModal(e) {
   modalContenido.classList.add('animacion_ocultar')
   setTimeout(() => {
-    modal.classList.add('hide');
+    modal.style.display = 'none';
     modalContenido.classList.remove('animacion_ocultar')
   }, 300);
   cedula.value = '';

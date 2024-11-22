@@ -271,7 +271,24 @@
         </fieldset>
       </form>
     </section>
-
+    <!-- Modal -->
+    <div id="modal" class="modal_login hide">
+      <div id="modalContenido" class="modal_login_contenido">
+          <h2 class="modal_titulo">Iniciar sesión</h2>
+          <form action="" method="POST">
+              <div class="cedula" id="numero_cedula">
+                  <label for="cedula">Numero de cédula</label>
+                  <input type="text" id="cedula" placeholder="Ingrese su numero de cedula" minlength="8"
+                      maxlength="10" required>
+              </div>
+              <div class="contrasena" id="numero_contrasena">
+                  <label for="contrasena">Contraseña</label>
+                  <input type="password" placeholder="Ingrese su contraseña">
+              </div>
+              <input class="iniciar_sesion_boton" type="submit" value="Iniciar sesión">
+          </form>
+      </div>
+  </div>
     <footer>
       <div class="redes_contenedor">
           <p>Síguenos en nuestras redes sociales.</p>
@@ -290,6 +307,7 @@
     <!--Logica del form-->
     <script type="module" src="../js/index.js"></script>
     <script type="module" src="../js/api_form.js"></script>
+    <script type="module" src="../js/login_modal.js" ></script>
    
   </body>
 </html>
